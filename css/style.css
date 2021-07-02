@@ -197,7 +197,7 @@ ul {
 	background: -webkit-linear-gradient(to top, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: #7b4397;
-	padding: 1px 40px;
+	padding: 0px 40px;
 	transition: all .5s ease;
 	border-radius: 10px;
 
