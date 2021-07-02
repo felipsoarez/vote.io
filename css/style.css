@@ -717,7 +717,7 @@ ul {
 }
 
 .contact .content-left ul li:hover a i {
-	color: #525252;
+	color: #fff;
 }
 
 .contact .content-left ul li:last-child {
@@ -734,7 +734,7 @@ ul {
 
 .contact .content-right .row .form-control {
 	border: 0;
-	border-bottom: 1px solid #525252;
+	border-bottom: 1px solid #fff;
 	border-radius: 0;
 	background: transparent;
 	padding: 0;
