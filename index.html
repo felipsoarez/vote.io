@@ -147,57 +147,33 @@
          <div class="container">
             <div class="box-content">
                <div class="row">
-                  <div class="col-md-6 col-sm-12 col-xs-12">
-                     <div class="content-left">
-                        <div class="section-title section-title-left">
-                           <h3>Vote.io </h3>
-                        </div>
-                        <h2>Não lembra o filme ou série?</h2>
-                        <h4>A Vote.io ajuda você! </h4>
-
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12">
-                     <div class="content-right">
-                        <form
-                           action="https://formspree.io/f/mnqggzqq"
-                           method="POST"
-                           >
-                           <div class="row">
-                              <div class="col">
-                                 <div id="first-name-field">
-                                    <input type="text" placeholder="Nome " class="form-control" name="name">
-                                 </div>
-                              </div>
-                              <div class="col">
-                                 <div id="last-name-field">
-                                    <input type="text" placeholder="Sobrenome" class="form-control" name="second">
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col">
-                                 <div id="email-field">
-                                    <input type="email" placeholder="E-mail" class="form-control" name="_replyto">
-                                 </div>
-                              </div>
-                              <div class="col">
-                                 <div id="subject-field">
-                                    <input type="text" placeholder="Assunto" class="form-control" name="assunto">
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col">
-                                 <div id="message-field">
-                                    <textarea cols="30" rows="5" class="form-control" id="form-message" name="message" placeholder="Mensagem"></textarea>
-                                 </div>
-                              </div>
-                           </div>
-                           <button class="button" type="submit" id="submit" name="submit">Enviar Mensagem</button>
-                        </form>
-                     </div>
-                  </div>
+                  <div class="table-wrapper">
+      <table class="table-users">
+        <tr>
+          <th>Firts Name</th>
+          <th>Last Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </table>
+      <button class="btn btn-add">Add User</button>
+    </div>
+    <!-- Add Modal -->
+    <div class="add-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Add New User</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="firstName" placeholder="First Name">
+            <input type="text" name="lastName" placeholder="Last Name">
+            <input type="number" name="phone" placeholder="Phone">
+            <input type="email" name="email" placeholder="Email">
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
                </div>
             </div>
          </div>
@@ -274,5 +250,29 @@
       <script src="js/main.js"></script>
       <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
       <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBVMYZjqsUyZMHqgqwqu_-VGDvxF7_381w",
+    authDomain: "voteio-21a5d.firebaseapp.com",
+    databaseURL: "https://voteio-21a5d-default-rtdb.firebaseio.com",
+    projectId: "voteio-21a5d",
+    storageBucket: "voteio-21a5d.appspot.com",
+    messagingSenderId: "679721715050",
+    appId: "1:679721715050:web:1ae841f98540aa63f0d113"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+  <script src="js/script.js"></script>
    </body>
 </html>
