@@ -150,75 +150,530 @@
                <div class="row">
 
                   <div class="py-12 px-4 flex justify-center items-center w-full">
-            <div class="flex-col flex justify-center items-center 2xl:w-4/12 bg-white shadow rounded-lg p-6 sm:p-8">
-                <p class="text-base font-semibold leading-none text-center text-gray-800">Upload Files</p>
-                <p class="mt-3 text-sm leading-5 text-center text-gray-600">Click browse files or Just drag & drop your files in this area.</p>
-                <div class="space-y-4 mt-6 hover:bg-gray-50 cursor-pointer border-dashed border-2 w-full py-6 flex justify-center items-center flex-col rounded-lg border-gray-400">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M28 20V25.3333C28 26.0406 27.719 26.7189 27.219 27.219C26.7189 27.719 26.0406 28 25.3333 28H6.66667C5.95942 28 5.28115 27.719 4.78105 27.219C4.28095 26.7189 4 26.0406 4 25.3333V20" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M22.6654 10.6667L15.9987 4L9.33203 10.6667" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M16 4V20" stroke="#1F2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <p class="w-44 text-sm leading-4 text-gray-800">Drag & Drop your files here</p>
-                    <p class="text-sm leading-4 text-gray-600">OR</p>
-                    <input type="file" id="upload1" hidden />
-                    <label class="py-3 px-6 cursor-pointer text-center bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 rounded text-sm leading-4 text-white" for="upload1">Browse Files</label>
-                </div>
-                <div class="mt-6 flex-col flex justify-start items-start w-full">
-                    <p class="text-sm font-medium leading-4 text-gray-600">Uploaded files</p>
-                    <div id="mainDiv" class="mt-4 flex justify-start items-center hover:shadow-md rounded-md transition ease-in-out duration-400 p-4 w-full space-x-4">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 0C8.625 0 7.5 1.125 7.5 2.5V37.5C7.5 38.875 8.625 40 10 40H35C36.375 40 37.5 38.875 37.5 37.5V10L27.5 0H10Z" fill="#E5E7EB" />
-                            <path d="M30 10H37.5L27.5 0V7.5C27.5 8.875 28.625 10 30 10Z" fill="#D1D5DB" />
-                            <path d="M37.5 17.5L30 10H37.5V17.5Z" fill="#E5E7EB" />
-                            <path d="M32.5 32.5C32.5 33.1875 31.9375 33.75 31.25 33.75H3.75C3.0625 33.75 2.5 33.1875 2.5 32.5V20C2.5 19.3125 3.0625 18.75 3.75 18.75H31.25C31.9375 18.75 32.5 19.3125 32.5 20V32.5Z" fill="#DC2626" />
-                            <path d="M7.94922 23.6841C7.94922 23.3541 8.20922 22.9941 8.62797 22.9941H10.9367C12.2367 22.9941 13.4067 23.8641 13.4067 25.5316C13.4067 27.1116 12.2367 27.9916 10.9367 27.9916H9.26797V29.3116C9.26797 29.7516 8.98797 30.0004 8.62797 30.0004C8.29797 30.0004 7.94922 29.7516 7.94922 29.3116V23.6841ZM9.26797 24.2529V26.7429H10.9367C11.6067 26.7429 12.1367 26.1516 12.1367 25.5316C12.1367 24.8329 11.6067 24.2529 10.9367 24.2529H9.26797Z" fill="white" />
-                            <path d="M15.3658 30.0002C15.0358 30.0002 14.6758 29.8202 14.6758 29.3815V23.704C14.6758 23.3452 15.0358 23.084 15.3658 23.084H17.6545C22.222 23.084 22.122 30.0002 17.7445 30.0002H15.3658ZM15.9958 24.304V28.7815H17.6545C20.3533 28.7815 20.4733 24.304 17.6545 24.304H15.9958Z" fill="white" />
-                            <path d="M23.7411 24.3843V25.973H26.2898C26.6498 25.973 27.0098 26.333 27.0098 26.6818C27.0098 27.0118 26.6498 27.2818 26.2898 27.2818H23.7411V29.3805C23.7411 29.7305 23.4923 29.9993 23.1423 29.9993C22.7023 29.9993 22.4336 29.7305 22.4336 29.3805V23.703C22.4336 23.3443 22.7036 23.083 23.1423 23.083H26.6511C27.0911 23.083 27.3511 23.3443 27.3511 23.703C27.3511 24.023 27.0911 24.383 26.6511 24.383H23.7411V24.3843Z" fill="white" />
-                            <path d="M31.25 33.75H7.5V35H31.25C31.9375 35 32.5 34.4375 32.5 33.75V32.5C32.5 33.1875 31.9375 33.75 31.25 33.75Z" fill="#E5E7EB" />
-                        </svg>
-                        <div class="flex justify-start w-full flex-col">
-                            <div class="flex justify-between items-center w-full">
-                                <p class="text-sm font-medium leading-4 text-gray-800">Brand Guides.pdf</p>
-                                <p id="percentage" class="text-xs leading-3 text-gray-600"><span id="text">80</span>%</p>
-                            </div>
-                            <div id="bar" class="mt-4 h-1 w-full bg-gray-100 rounded-full">
-                                <div id="loadingBar" class="h-full rounded-full w-full bg-blue-700"></div>
-                            </div>
-                            <div id="mb" class="mt-2">
-                                <p class="text-xs leading-3 text-gray-600">8.56 MB</p>
-                            </div>
-                            <div id="mb2" class="mt-2 hidden">
-                                <p class="text-xs leading-3 text-gray-600">2.56 MB - Uploading Error</p>
-                            </div>
+        <!-- Desktop and Ipad Screen size -->
+        <div class="hidden md:block shadow  overflow-y-auto">
+            <table class="w-full whitespace-nowrap">
+                <thead class="w-full" >
+                    <tr class="focus:outline-none h-16 w-full text-base    leading-4 text-white bg-gray-800 ">
+                        <th class="pl-4 rounded-tl ">
+                        </th>
+                        <th class="font-semibold pl-10  ">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                            <input id='main' placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                            <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                         </div>
-                        <button id="cross" onclick="failbtn(true)" class="rounded-full p-1 bg-gray-100">
-                            <svg class="w-4" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.25 4.25L3.75 11.75" stroke="#4B5563" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M3.75 4.25L11.25 11.75" stroke="#4B5563" stroke-linecap="round" stroke-linejoin="round" />
+                    </th>
+                        <th class="text-left"><span class="pl-6 pr-32 "> Project Title</span></th>
+                        <th class="text-left font-semibold pl-4 pr-14"> Duration</th>
+                        <th class="text-left font-semibold pl-4 pr-14"> Cost</th>
+                        <th class="text-left font-semibold pl-4 pr-14"> Starting Date</th>
+                        <th class="text-left font-semibold pl-4 pr-14"> Deadline</th>
+                        <th class="text-left font-semibold pl-4 pr-6 "> Collaborators</th>
+                        <th class="pr-6 rounded-tr">
+
+                        </th> 
+                    </tr>
+                </thead>
+                <tbody class="">
+                    <tr class="h-16 w-full text-sm leading-4 text-gray-800 hover:bg-gray-100">
+                        <td class="pl-4">
+                            <button>
+                            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55806 0.808058C9.80214 0.563981 10.1979 0.563981 10.4419 0.808058L13.5669 3.93306C13.811 4.17714 13.811 4.57286 13.5669 4.81694C13.3229 5.06102 12.9271 5.06102 12.6831 4.81694L10 2.13388L7.31694 4.81694C7.07286 5.06102 6.67714 5.06102 6.43306 4.81694C6.18898 4.57286 6.18898 4.17714 6.43306 3.93306L9.55806 0.808058Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 0.625C10.3451 0.624985 10.625 0.904794 10.625 1.24997L10.6258 18.75C10.6258 19.0951 10.346 19.375 10.0008 19.375C9.65563 19.375 9.3758 19.0952 9.37578 18.75L9.375 1.25003C9.37498 0.90485 9.65479 0.625015 9.99997 0.625Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.43306 15.1831C6.67714 14.939 7.07286 14.939 7.31694 15.1831L10 17.8661L12.6831 15.1831C12.9271 14.939 13.3229 14.939 13.5669 15.1831C13.811 15.4271 13.811 15.8229 13.5669 16.0669L10.4419 19.1919C10.1979 19.436 9.80214 19.436 9.55806 19.1919L6.43306 16.0669C6.18898 15.8229 6.18898 15.4271 6.43306 15.1831Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1831 6.43306C15.4271 6.18898 15.8229 6.18898 16.0669 6.43306L19.1919 9.55806C19.436 9.80214 19.436 10.1979 19.1919 10.4419L16.0669 13.5669C15.8229 13.811 15.4271 13.811 15.1831 13.5669C14.939 13.3229 14.939 12.9271 15.1831 12.6831L17.8661 10L15.1831 7.31694C14.939 7.07286 14.939 6.67714 15.1831 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81694 6.43306C5.06102 6.67714 5.06102 7.07286 4.81694 7.31694L2.13388 10L4.81694 12.6831C5.06102 12.9271 5.06102 13.3229 4.81694 13.5669C4.57286 13.811 4.17714 13.811 3.93306 13.5669L0.808058 10.4419C0.563981 10.1979 0.563981 9.80214 0.808058 9.55806L3.93306 6.43306C4.17714 6.18898 4.57286 6.18898 4.81694 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 10C0.625 9.65482 0.904822 9.375 1.25 9.375H18.75C19.0952 9.375 19.375 9.65482 19.375 10C19.375 10.3452 19.0952 10.625 18.75 10.625H1.25C0.904822 10.625 0.625 10.3452 0.625 10Z" fill="#4B5563"/>
                             </svg>
                         </button>
-                        <button id="success" onclick="letsGOAgain(true)" class="hidden rounded-full p-1 bg-green-100">
-                            <svg class="" width="14" height="14" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99694 2.71779C10.1528 2.85417 10.1686 3.09108 10.0322 3.24694L4.78222 9.24695C4.71387 9.32505 4.61621 9.37134 4.51248 9.3748C4.40875 9.37825 4.30822 9.33856 4.23483 9.26517L1.98483 7.01517C1.83839 6.86872 1.83839 6.63129 1.98483 6.48484C2.13128 6.33839 2.36872 6.33839 2.51516 6.48484L4.48173 8.45141L9.46778 2.75307C9.60416 2.5972 9.84107 2.58141 9.99694 2.71779Z" fill="#059669" />
+                            </td>
+                        <td class="pl-10">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                                <input placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                                <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </td>
+                        <td class="pl-6 pr-32 ">
+                            UI/UX Designing
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            1 Month
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            $5000
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 ">
+                            <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                        </td> 
+                        <td class="pr-6 relative">
+                            <button onclick="show('dropdown1')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                                </svg>
+                            </button>
+                            <div id="dropdown1" class="hidden z-10 right-7 bg-white top-12 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                                <button onclick="show('dropdown1')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    Edit
+                                </button>
+                                <button onclick="show('dropdown1')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    View Project
+                                </button>
+                                <button onclick="show('dropdown1')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                    Finish Project
+                                </button>
+                                <hr class="border-gray-100 w-full">
+                                <button onclick="show('dropdown1')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                    Delete
+                                </button>
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr class="h-16 w-full text-sm leading-4 text-gray-800 hover:bg-gray-100">
+                        <td class="pl-4">
+                            <button>
+                            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55806 0.808058C9.80214 0.563981 10.1979 0.563981 10.4419 0.808058L13.5669 3.93306C13.811 4.17714 13.811 4.57286 13.5669 4.81694C13.3229 5.06102 12.9271 5.06102 12.6831 4.81694L10 2.13388L7.31694 4.81694C7.07286 5.06102 6.67714 5.06102 6.43306 4.81694C6.18898 4.57286 6.18898 4.17714 6.43306 3.93306L9.55806 0.808058Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 0.625C10.3451 0.624985 10.625 0.904794 10.625 1.24997L10.6258 18.75C10.6258 19.0951 10.346 19.375 10.0008 19.375C9.65563 19.375 9.3758 19.0952 9.37578 18.75L9.375 1.25003C9.37498 0.90485 9.65479 0.625015 9.99997 0.625Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.43306 15.1831C6.67714 14.939 7.07286 14.939 7.31694 15.1831L10 17.8661L12.6831 15.1831C12.9271 14.939 13.3229 14.939 13.5669 15.1831C13.811 15.4271 13.811 15.8229 13.5669 16.0669L10.4419 19.1919C10.1979 19.436 9.80214 19.436 9.55806 19.1919L6.43306 16.0669C6.18898 15.8229 6.18898 15.4271 6.43306 15.1831Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1831 6.43306C15.4271 6.18898 15.8229 6.18898 16.0669 6.43306L19.1919 9.55806C19.436 9.80214 19.436 10.1979 19.1919 10.4419L16.0669 13.5669C15.8229 13.811 15.4271 13.811 15.1831 13.5669C14.939 13.3229 14.939 12.9271 15.1831 12.6831L17.8661 10L15.1831 7.31694C14.939 7.07286 14.939 6.67714 15.1831 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81694 6.43306C5.06102 6.67714 5.06102 7.07286 4.81694 7.31694L2.13388 10L4.81694 12.6831C5.06102 12.9271 5.06102 13.3229 4.81694 13.5669C4.57286 13.811 4.17714 13.811 3.93306 13.5669L0.808058 10.4419C0.563981 10.1979 0.563981 9.80214 0.808058 9.55806L3.93306 6.43306C4.17714 6.18898 4.57286 6.18898 4.81694 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 10C0.625 9.65482 0.904822 9.375 1.25 9.375H18.75C19.0952 9.375 19.375 9.65482 19.375 10C19.375 10.3452 19.0952 10.625 18.75 10.625H1.25C0.904822 10.625 0.625 10.3452 0.625 10Z" fill="#4B5563"/>
+                            </svg>
+                            </td>
+                        </button>
+                        <td class="pl-10">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                                <input placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                                <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </td>
+                        <td class="pl-6 pr-32 ">
+                            Project Development
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            1 Month
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            $5000
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 ">
+                            <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                        </td> 
+                        <td class="pr-6 relative">
+                            <button onclick="show('dropdown2')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                                </svg>
+                            </button>
+                            <div id="dropdown2" class="hidden z-10 right-7 bg-white top-12 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                                <button onclick="show('dropdown2')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    Edit
+                                </button>
+                                <button onclick="show('dropdown2')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    View Project
+                                </button>
+                                <button onclick="show('dropdown2')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                    Finish Project
+                                </button>
+                                <hr class="border-gray-100 w-full">
+                                <button onclick="show('dropdown2')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                    Delete
+                                </button>
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr class="h-16 w-full text-sm leading-4 text-gray-800 hover:bg-gray-100">
+                        <td class="pl-4">
+                            <button>
+                            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55806 0.808058C9.80214 0.563981 10.1979 0.563981 10.4419 0.808058L13.5669 3.93306C13.811 4.17714 13.811 4.57286 13.5669 4.81694C13.3229 5.06102 12.9271 5.06102 12.6831 4.81694L10 2.13388L7.31694 4.81694C7.07286 5.06102 6.67714 5.06102 6.43306 4.81694C6.18898 4.57286 6.18898 4.17714 6.43306 3.93306L9.55806 0.808058Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 0.625C10.3451 0.624985 10.625 0.904794 10.625 1.24997L10.6258 18.75C10.6258 19.0951 10.346 19.375 10.0008 19.375C9.65563 19.375 9.3758 19.0952 9.37578 18.75L9.375 1.25003C9.37498 0.90485 9.65479 0.625015 9.99997 0.625Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.43306 15.1831C6.67714 14.939 7.07286 14.939 7.31694 15.1831L10 17.8661L12.6831 15.1831C12.9271 14.939 13.3229 14.939 13.5669 15.1831C13.811 15.4271 13.811 15.8229 13.5669 16.0669L10.4419 19.1919C10.1979 19.436 9.80214 19.436 9.55806 19.1919L6.43306 16.0669C6.18898 15.8229 6.18898 15.4271 6.43306 15.1831Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1831 6.43306C15.4271 6.18898 15.8229 6.18898 16.0669 6.43306L19.1919 9.55806C19.436 9.80214 19.436 10.1979 19.1919 10.4419L16.0669 13.5669C15.8229 13.811 15.4271 13.811 15.1831 13.5669C14.939 13.3229 14.939 12.9271 15.1831 12.6831L17.8661 10L15.1831 7.31694C14.939 7.07286 14.939 6.67714 15.1831 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81694 6.43306C5.06102 6.67714 5.06102 7.07286 4.81694 7.31694L2.13388 10L4.81694 12.6831C5.06102 12.9271 5.06102 13.3229 4.81694 13.5669C4.57286 13.811 4.17714 13.811 3.93306 13.5669L0.808058 10.4419C0.563981 10.1979 0.563981 9.80214 0.808058 9.55806L3.93306 6.43306C4.17714 6.18898 4.57286 6.18898 4.81694 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 10C0.625 9.65482 0.904822 9.375 1.25 9.375H18.75C19.0952 9.375 19.375 9.65482 19.375 10C19.375 10.3452 19.0952 10.625 18.75 10.625H1.25C0.904822 10.625 0.625 10.3452 0.625 10Z" fill="#4B5563"/>
                             </svg>
                         </button>
-                        <button id="fail" onclick="failbtn(true)" class="hidden rounded-full p-1.5 bg-red-100">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    fill-rule="evenodd"
-                                    clip-rule="evenodd"
-                                    d="M5.62477 1.125C6.28423 1.12421 6.93695 1.2576 7.54323 1.51704C8.14959 1.77651 8.69681 2.15665 9.15159 2.63431L9.15816 2.64122L9.65938 3.22431C9.79438 3.38136 9.7765 3.61813 9.61945 3.75313C9.46239 3.88814 9.22563 3.87026 9.09062 3.7132L8.60197 3.14473C8.21863 2.74392 7.75813 2.42478 7.24817 2.20656C6.73536 1.98712 6.18326 1.87431 5.62547 1.875L5.62523 1.875H5.625C3.34773 1.875 1.5 3.72274 1.5 6C1.5 8.27726 3.34772 10.125 5.62497 10.125M5.62477 1.125C2.93339 1.12513 0.75 3.3086 0.75 6C0.75 8.69149 2.93352 10.875 5.625 10.875H5.62503C6.63325 10.8749 7.61668 10.5624 8.43997 9.98041C9.26326 9.39842 9.88595 8.57557 10.2223 7.62512C10.2914 7.42988 10.1892 7.21559 9.99395 7.14649C9.79871 7.07739 9.58442 7.17965 9.51532 7.37489C9.23066 8.17918 8.70373 8.87549 8.00704 9.36798C7.31036 9.86047 6.47817 10.1249 5.625 10.125"
-                                    fill="#DC2626"
-                                />
-                                <path d="M10.8739 2.28333V4.87505C10.8739 4.97451 10.8344 5.06989 10.764 5.14021C10.6937 5.21054 10.5983 5.25005 10.4989 5.25005H7.90715C7.57293 5.25005 7.40558 4.84622 7.64183 4.60997L10.2338 2.01802C10.47 1.7813 10.8739 1.94911 10.8739 2.28333Z" fill="#DC2626" />
+                            </td>
+                        <td class="pl-10">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                                <input placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                                <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </td>
+                        <td class="pl-6 pr-32 ">
+                            Prototyping
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            1 Month
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            $5000
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 ">
+                            <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                        </td> 
+                        <td class="pr-6 relative">
+                            <button onclick="show('dropdown3')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                                </svg>
+                            </button>
+                            <div id="dropdown3" class="hidden z-10 right-7 bg-white top-12 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                                <button onclick="show('dropdown3')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    Edit
+                                </button>
+                                <button onclick="show('dropdown3')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    View Project
+                                </button>
+                                <button onclick="show('dropdown3')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                    Finish Project
+                                </button>
+                                <hr class="border-gray-100 w-full">
+                                <button onclick="show('dropdown3')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                    Delete
+                                </button>
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr class="h-16 w-full text-sm leading-4 text-gray-800 hover:bg-gray-100">
+                        <td class="pl-4">
+                            <button>
+                            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55806 0.808058C9.80214 0.563981 10.1979 0.563981 10.4419 0.808058L13.5669 3.93306C13.811 4.17714 13.811 4.57286 13.5669 4.81694C13.3229 5.06102 12.9271 5.06102 12.6831 4.81694L10 2.13388L7.31694 4.81694C7.07286 5.06102 6.67714 5.06102 6.43306 4.81694C6.18898 4.57286 6.18898 4.17714 6.43306 3.93306L9.55806 0.808058Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 0.625C10.3451 0.624985 10.625 0.904794 10.625 1.24997L10.6258 18.75C10.6258 19.0951 10.346 19.375 10.0008 19.375C9.65563 19.375 9.3758 19.0952 9.37578 18.75L9.375 1.25003C9.37498 0.90485 9.65479 0.625015 9.99997 0.625Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.43306 15.1831C6.67714 14.939 7.07286 14.939 7.31694 15.1831L10 17.8661L12.6831 15.1831C12.9271 14.939 13.3229 14.939 13.5669 15.1831C13.811 15.4271 13.811 15.8229 13.5669 16.0669L10.4419 19.1919C10.1979 19.436 9.80214 19.436 9.55806 19.1919L6.43306 16.0669C6.18898 15.8229 6.18898 15.4271 6.43306 15.1831Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1831 6.43306C15.4271 6.18898 15.8229 6.18898 16.0669 6.43306L19.1919 9.55806C19.436 9.80214 19.436 10.1979 19.1919 10.4419L16.0669 13.5669C15.8229 13.811 15.4271 13.811 15.1831 13.5669C14.939 13.3229 14.939 12.9271 15.1831 12.6831L17.8661 10L15.1831 7.31694C14.939 7.07286 14.939 6.67714 15.1831 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81694 6.43306C5.06102 6.67714 5.06102 7.07286 4.81694 7.31694L2.13388 10L4.81694 12.6831C5.06102 12.9271 5.06102 13.3229 4.81694 13.5669C4.57286 13.811 4.17714 13.811 3.93306 13.5669L0.808058 10.4419C0.563981 10.1979 0.563981 9.80214 0.808058 9.55806L3.93306 6.43306C4.17714 6.18898 4.57286 6.18898 4.81694 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 10C0.625 9.65482 0.904822 9.375 1.25 9.375H18.75C19.0952 9.375 19.375 9.65482 19.375 10C19.375 10.3452 19.0952 10.625 18.75 10.625H1.25C0.904822 10.625 0.625 10.3452 0.625 10Z" fill="#4B5563"/>
                             </svg>
                         </button>
+                            </td>
+                        <td class="pl-10">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                                <input placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                                <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </td>
+                        <td class="pl-6 pr-32 ">
+                            Project Development
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            1 Month
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            $5000
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 ">
+                            <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                        </td> 
+                        <td class="pr-6 relative">
+                            <button onclick="show('dropdown4')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                                </svg>
+                            </button>
+                            <div id="dropdown4" class="hidden z-10 right-7 bg-white top-12 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                                <button onclick="show('dropdown4')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    Edit
+                                </button>
+                                <button onclick="show('dropdown4')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    View Project
+                                </button>
+                                <button onclick="show('dropdown4')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                    Finish Project
+                                </button>
+                                <hr class="border-gray-100 w-full">
+                                <button onclick="show('dropdown4')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                    Delete
+                                </button>
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr class="h-16 w-full text-sm leading-4 text-gray-800 hover:bg-gray-100">
+                        <td class="pl-4">
+                            <button>
+                            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55806 0.808058C9.80214 0.563981 10.1979 0.563981 10.4419 0.808058L13.5669 3.93306C13.811 4.17714 13.811 4.57286 13.5669 4.81694C13.3229 5.06102 12.9271 5.06102 12.6831 4.81694L10 2.13388L7.31694 4.81694C7.07286 5.06102 6.67714 5.06102 6.43306 4.81694C6.18898 4.57286 6.18898 4.17714 6.43306 3.93306L9.55806 0.808058Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 0.625C10.3451 0.624985 10.625 0.904794 10.625 1.24997L10.6258 18.75C10.6258 19.0951 10.346 19.375 10.0008 19.375C9.65563 19.375 9.3758 19.0952 9.37578 18.75L9.375 1.25003C9.37498 0.90485 9.65479 0.625015 9.99997 0.625Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.43306 15.1831C6.67714 14.939 7.07286 14.939 7.31694 15.1831L10 17.8661L12.6831 15.1831C12.9271 14.939 13.3229 14.939 13.5669 15.1831C13.811 15.4271 13.811 15.8229 13.5669 16.0669L10.4419 19.1919C10.1979 19.436 9.80214 19.436 9.55806 19.1919L6.43306 16.0669C6.18898 15.8229 6.18898 15.4271 6.43306 15.1831Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1831 6.43306C15.4271 6.18898 15.8229 6.18898 16.0669 6.43306L19.1919 9.55806C19.436 9.80214 19.436 10.1979 19.1919 10.4419L16.0669 13.5669C15.8229 13.811 15.4271 13.811 15.1831 13.5669C14.939 13.3229 14.939 12.9271 15.1831 12.6831L17.8661 10L15.1831 7.31694C14.939 7.07286 14.939 6.67714 15.1831 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81694 6.43306C5.06102 6.67714 5.06102 7.07286 4.81694 7.31694L2.13388 10L4.81694 12.6831C5.06102 12.9271 5.06102 13.3229 4.81694 13.5669C4.57286 13.811 4.17714 13.811 3.93306 13.5669L0.808058 10.4419C0.563981 10.1979 0.563981 9.80214 0.808058 9.55806L3.93306 6.43306C4.17714 6.18898 4.57286 6.18898 4.81694 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 10C0.625 9.65482 0.904822 9.375 1.25 9.375H18.75C19.0952 9.375 19.375 9.65482 19.375 10C19.375 10.3452 19.0952 10.625 18.75 10.625H1.25C0.904822 10.625 0.625 10.3452 0.625 10Z" fill="#4B5563"/>
+                            </svg>
+                        </button>
+                            </td>
+                        <td class="pl-10">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                                <input placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                                <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </td>
+                        <td class="pl-6 pr-32 ">
+                            Project Development
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            1 Month
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            $5000
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 ">
+                            <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                        </td> 
+                        <td class="pr-6 relative">
+                            <button onclick="show('dropdown5')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                                </svg>
+                            </button>
+                            <div id="dropdown5" class="hidden z-10 right-7 bg-white top-12 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                                <button onclick="show('dropdown5')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    Edit
+                                </button>
+                                <button onclick="show('dropdown5')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    View Project
+                                </button>
+                                <button onclick="show('dropdown5')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                    Finish Project
+                                </button>
+                                <hr class="border-gray-100 w-full">
+                                <button onclick="show('dropdown5')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                    Delete
+                                </button>
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr class="h-16 w-full text-sm leading-4 text-gray-800 hover:bg-gray-100 ">
+                        <td class="pl-4 rounded-bl">
+                            <button>
+                            <svg  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55806 0.808058C9.80214 0.563981 10.1979 0.563981 10.4419 0.808058L13.5669 3.93306C13.811 4.17714 13.811 4.57286 13.5669 4.81694C13.3229 5.06102 12.9271 5.06102 12.6831 4.81694L10 2.13388L7.31694 4.81694C7.07286 5.06102 6.67714 5.06102 6.43306 4.81694C6.18898 4.57286 6.18898 4.17714 6.43306 3.93306L9.55806 0.808058Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99997 0.625C10.3451 0.624985 10.625 0.904794 10.625 1.24997L10.6258 18.75C10.6258 19.0951 10.346 19.375 10.0008 19.375C9.65563 19.375 9.3758 19.0952 9.37578 18.75L9.375 1.25003C9.37498 0.90485 9.65479 0.625015 9.99997 0.625Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.43306 15.1831C6.67714 14.939 7.07286 14.939 7.31694 15.1831L10 17.8661L12.6831 15.1831C12.9271 14.939 13.3229 14.939 13.5669 15.1831C13.811 15.4271 13.811 15.8229 13.5669 16.0669L10.4419 19.1919C10.1979 19.436 9.80214 19.436 9.55806 19.1919L6.43306 16.0669C6.18898 15.8229 6.18898 15.4271 6.43306 15.1831Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1831 6.43306C15.4271 6.18898 15.8229 6.18898 16.0669 6.43306L19.1919 9.55806C19.436 9.80214 19.436 10.1979 19.1919 10.4419L16.0669 13.5669C15.8229 13.811 15.4271 13.811 15.1831 13.5669C14.939 13.3229 14.939 12.9271 15.1831 12.6831L17.8661 10L15.1831 7.31694C14.939 7.07286 14.939 6.67714 15.1831 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81694 6.43306C5.06102 6.67714 5.06102 7.07286 4.81694 7.31694L2.13388 10L4.81694 12.6831C5.06102 12.9271 5.06102 13.3229 4.81694 13.5669C4.57286 13.811 4.17714 13.811 3.93306 13.5669L0.808058 10.4419C0.563981 10.1979 0.563981 9.80214 0.808058 9.55806L3.93306 6.43306C4.17714 6.18898 4.57286 6.18898 4.81694 6.43306Z" fill="#4B5563"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.625 10C0.625 9.65482 0.904822 9.375 1.25 9.375H18.75C19.0952 9.375 19.375 9.65482 19.375 10C19.375 10.3452 19.0952 10.625 18.75 10.625H1.25C0.904822 10.625 0.625 10.3452 0.625 10Z" fill="#4B5563"/>
+                            </svg>
+                        </button>
+                            </td>
+                        <td class="pl-10">
+                            <div data class="cursor-pointer relative flex justify-center items-center">
+                                <input placeholder="check box" type="checkbox" class=" cursor-pointer relative appearance-none w-4 h-4 border-gray-300 border  bg-transparent rounded"  />
+                                <svg class="hidden absolute" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 2L3 6L1.5 4.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                        </td>
+                        <td class="pl-6 pr-32 ">
+                            Project Development
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            1 Month
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            $5000
+                        </td>
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 pr-14">
+                            09/23/2021
+                        </td>  
+                        <td class="  pl-4 ">
+                            <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                        </td> 
+                        <td class="pr-6 relative rounded-br ">
+                            <button onclick="show('dropdown6')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                                </svg>
+                            </button>
+                            <div id="dropdown6" class="hidden z-10 right-7 bg-white top-12 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                                <button onclick="show('dropdown6')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    Edit
+                                </button>
+                                <button onclick="show('dropdown6')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                    View Project
+                                </button>
+                                <button onclick="show('dropdown6')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                    Finish Project
+                                </button>
+                                <hr class="border-gray-100 w-full">
+                                <button onclick="show('dropdown6')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                    Delete
+                                </button>
+                            </div>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Desktop and Ipad Screen size -->
+
+        <div class="w-96 md:hidden shadow rounded ">
+            <div class="w-full hover:bg-gray-100 p-6 flex justify-start flex-col space-y-8">
+                <div class="flex justify-between items-center w-full">
+                    <div class="flex justify-start items-start flex-col space-y-2 ">
+                        <p class="text-base font-semibold leading-4 text-gray-800">Project Title</p>
+                        <p class="text-sm leading-4 text-gray-600">Project Development</p>
+                    </div>
+                    <div class=" relative">
+                        <button onclick="show('dropdown7')">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                            </svg>
+                        </button>
+                        <div id="dropdown7" class="hidden z-10 right-0 bg-white top-8 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                            <button onclick="show('dropdown7')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                Edit
+                            </button>
+                            <button onclick="show('dropdown7')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                View Project
+                            </button>
+                            <button onclick="show('dropdown7')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                Finish Project
+                            </button>
+                            <hr class="border-gray-100 w-full">
+                            <button onclick="show('dropdown7')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                Delete
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="flex justify-between items-start w-full">
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Duration</p>
+                        <p class="text-sm leading-none text-gray-600">1 Month</p>
+                    </div>
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Cost</p>
+                        <p class="text-sm leading-none text-gray-600">$5000</p>
                     </div>
                 </div>
+                <div class="flex justify-between items-start w-full">
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Starting Date</p>
+                        <p class="text-sm leading-none text-gray-600">09/23/2021</p>
+                    </div>
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Deadline</p>
+                        <p class="text-sm leading-none text-gray-600">09/23/2021</p>
+                    </div>
+                </div>
+                <div class="flex justify-start items-start ">
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Collaborators</p>
+                        <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                    </div>
+                    
+                </div>
             </div>
+            <div class="w-full hover:bg-gray-100 p-6 flex justify-start flex-col space-y-8">
+                <div class="flex justify-between items-center w-full">
+                    <div class="flex justify-start items-start flex-col space-y-2 ">
+                        <p class="text-base font-semibold leading-4 text-gray-800">Project Title</p>
+                        <p class="text-sm leading-4 text-gray-600">Project Development</p>
+                    </div>
+                    <div class=" relative">
+                        <button onclick="show('dropdown8')">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.25 12C2.25 17.3845 6.61547 21.75 12 21.75C17.3845 21.75 21.75 17.3845 21.75 12C21.75 6.61547 17.3845 2.25 12 2.25C6.61547 2.25 2.25 6.61547 2.25 12ZM13.2188 16.2188C13.2188 16.4598 13.1473 16.6954 13.0134 16.8959C12.8794 17.0963 12.6891 17.2525 12.4664 17.3447C12.2437 17.437 11.9986 17.4611 11.7622 17.4141C11.5258 17.3671 11.3087 17.251 11.1382 17.0805C10.9678 16.9101 10.8517 16.6929 10.8047 16.4565C10.7576 16.2201 10.7818 15.9751 10.874 15.7524C10.9663 15.5297 11.1225 15.3393 11.3229 15.2054C11.5233 15.0715 11.759 15 12 15C12.3232 15 12.6332 15.1284 12.8618 15.357C13.0903 15.5855 13.2188 15.8955 13.2188 16.2188ZM13.2188 12C13.2188 12.241 13.1473 12.4767 13.0134 12.6771C12.8794 12.8775 12.6891 13.0337 12.4664 13.126C12.2437 13.2182 11.9986 13.2424 11.7622 13.1953C11.5258 13.1483 11.3087 13.0322 11.1382 12.8618C10.9678 12.6913 10.8517 12.4742 10.8047 12.2378C10.7576 12.0014 10.7818 11.7563 10.874 11.5336C10.9663 11.3109 11.1225 11.1206 11.3229 10.9866C11.5233 10.8527 11.759 10.7812 12 10.7812C12.3232 10.7812 12.6332 10.9097 12.8618 11.1382C13.0903 11.3668 13.2188 11.6768 13.2188 12ZM13.2188 7.78125C13.2188 8.0223 13.1473 8.25793 13.0134 8.45835C12.8794 8.65877 12.6891 8.81498 12.4664 8.90723C12.2437 8.99947 11.9986 9.02361 11.7622 8.97658C11.5258 8.92956 11.3087 8.81348 11.1382 8.64304C10.9678 8.47259 10.8517 8.25543 10.8047 8.01902C10.7576 7.7826 10.7818 7.53755 10.874 7.31485C10.9663 7.09216 11.1225 6.90181 11.3229 6.7679C11.5233 6.63398 11.759 6.5625 12 6.5625C12.3232 6.5625 12.6332 6.6909 12.8618 6.91946C13.0903 7.14802 13.2188 7.45802 13.2188 7.78125Z" fill="#1F2937"/>
+                            </svg>
+                        </button>
+                        <div id="dropdown8" class="hidden z-10 right-0 bg-white top-8 absolute flex justify-start flex-col p-1.5 w-40 rounded-md shadow-md">
+                            <button onclick="show('dropdown8')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                Edit
+                            </button>
+                            <button onclick="show('dropdown8')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-gray-800">
+                                View Project
+                            </button>
+                            <button onclick="show('dropdown8')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-green-700">
+                                Finish Project
+                            </button>
+                            <hr class="border-gray-100 w-full">
+                            <button onclick="show('dropdown8')" class="text-sm tracking-wider text-left rounded hover:bg-blue-50 w-full p-1.5  text-red-700">
+                                Delete
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="flex justify-between items-start w-full">
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Duration</p>
+                        <p class="text-sm leading-none text-gray-600">1 Month</p>
+                    </div>
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Cost</p>
+                        <p class="text-sm leading-none text-gray-600">$5000</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start w-full">
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Starting Date</p>
+                        <p class="text-sm leading-none text-gray-600">09/23/2021</p>
+                    </div>
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Deadline</p>
+                        <p class="text-sm leading-none text-gray-600">09/23/2021</p>
+                    </div>
+                </div>
+                <div class="flex justify-start items-start ">
+                    <div class="flex flex-col justify-start items-start space-y-2">
+                        <p class="text-base font-semibold leading-none text-gray-800">Collaborators</p>
+                        <img src="https://i.ibb.co/t4W2Ljr/Group-1909.png" alt="avatars"  />
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
         </div>
-        
+    </div>
 
           
                </div>
@@ -299,62 +754,30 @@
       <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
 
       <script>
-            var startPercentage = () => {
-                var width = 0;
-                var bar = document.getElementById("loadingBar");
-                var text = document.getElementById("text");
-                var cross = document.getElementById("cross");
-                var success = document.getElementById("success");
-                var fail = document.getElementById("fail");
-                var mainbar = document.getElementById("bar");
-                var mb = document.getElementById("mb");
-                var mb2 = document.getElementById("mb2");
-                var percentage = document.getElementById("percentage");
-                var mainDiv = document.getElementById("mainDiv");
+        var main = document.querySelectorAll("[data]")
+        for(i=0 ; i < main.length ; i++) {
+            let menu = main[i];
+            menu.addEventListener('click', () => {
+               let svg = menu.children[1]
+               let input = menu.children[0]
+               if(input.id === 'main'){
+                  for(j=0 ; j<=  main.length ; j++){
+                    main[j].children[1].classList.toggle("hidden")
+                    main[j].children[0].classList.toggle("bg-blue-700")
+                  }
+               }
+                svg.classList.toggle("hidden")
+                input.classList.toggle("bg-blue-700")     
+            })
+        }
 
-                var start2 = setInterval(() => {
-                    if (width < 100) {
-                        width++;
-                        bar.style.width = width + "%";
-                        text.innerHTML = width;
-                        clearInterval(start);
-                        failbtn = (flag) => {
-                            if (flag) {
-                                cross.classList.toggle("hidden");
-                                fail.classList.toggle("hidden");
-                                mb2.classList.toggle("hidden");
-                                mb.classList.toggle("hidden");
-                                percentage.classList.toggle("hidden");
-                                mainbar.classList.toggle("hidden");
-                                mainDiv.classList.remove("bg-white");
-                                mainDiv.classList.toggle("bg-red-50");
-                                width = 0;
-                                return;
-                            }
-                        };
-                    } else {
-                        letsGOAgain = (flag) => {
-                            if (flag) {
-                                width = 0;
-                                mainbar.classList.remove("hidden");
-                                mainDiv.classList.remove("bg-red-50");
-                                success.classList.add("hidden");
-                                cross.classList.remove("hidden");
-                                mb.classList.remove("hidden");
-                                percentage.classList.remove("hidden");
-                            }
-                        };
-                        cross.classList.add("hidden");
-                        success.classList.remove("hidden");
-                        mainbar.classList.add("hidden");
-                        mb.classList.add("hidden");
-                        percentage.classList.add("hidden");
-                        return;
-                    }
-                }, 100);
-            };
-            const start = setInterval(startPercentage, 1000);
-        </script>
+        show = (dropdownID) => {
+            document.getElementById(dropdownID).classList.toggle("hidden");
+        } 
+    </script>
+
+
+    
   <script src="js/script.js"></script>
    </body>
 </html>
